@@ -1,7 +1,5 @@
 FROM node:14-alpine
 
-WORKDIR /usr/src/app
-
 RUN RUN npm install
 COPY . .
 RUN npm run build
