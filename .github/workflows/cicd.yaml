@@ -31,11 +31,10 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     
-    - name: create test file
+    - name: check files
       run: |
         pwd
         ls -al
-        mv * /home/.
     
     - name: Get verion
       id: image
