@@ -1,7 +1,9 @@
-FROM ubuntu:latest
+FROM node:14-alpine
 
-RUN echo "hello world"
+WORKDIR /usr/src/app
 
-RUN pwd
+RUN RUN npm install
+COPY . .
+RUN npm run build
 
-RUN ls -al
+CMD ["node", "dist/main"]
