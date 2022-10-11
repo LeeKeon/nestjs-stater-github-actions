@@ -1,7 +1,6 @@
 FROM node:14-alpine
 
-RUN ls -al
-RUN pwd
+WORKDIR /opt
 
 RUN npm install
 COPY . .
