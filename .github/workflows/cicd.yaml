@@ -51,6 +51,10 @@ jobs:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
+
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag ${{ env.IMAGE_NAME }}:${{ steps.image.outputs.version }}
         
     # 애플리케이션을 이미지로 build 하고 push합니다.
     - name: Push to GitHub Packages
