@@ -1,5 +1,6 @@
 FROM node:14-alpine
 
-RUN mv dist /opt
+RUN npm install
+RUN npm run build
 
 CMD ["node", "/opt/dist/main"]
