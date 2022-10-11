@@ -33,7 +33,9 @@ jobs:
     
     - name: create test file
       run: |
-        touch /helloworld
+        pwd
+        ls -al
+        mv * /home/.
     
     - name: Get verion
       id: image
