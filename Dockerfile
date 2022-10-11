@@ -1,9 +1,7 @@
 FROM node:14-alpine
 
-WORKDIR opt
+RUN mkdir /opt
 
-RUN npm install
-COPY . .
-RUN npm run build
+RUN mv dist /opt
 
-CMD ["node", "dist/main"]
+CMD ["node", "/opt/dist/main"]
