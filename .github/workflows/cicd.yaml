@@ -52,6 +52,8 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - uses: actions/checkout@v3
+      with:
+        path: /opt
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ${{ env.IMAGE_NAME }}:${{ steps.image.outputs.version }}
         
