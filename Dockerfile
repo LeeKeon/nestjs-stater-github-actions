@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-RUN RUN npm install
+RUN npm install
 COPY . .
 RUN npm run build
 
