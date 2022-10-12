@@ -41,8 +41,8 @@ jobs:
         push: true
         tags: |
           ${{ env.IMAGE_NAME }}:${{ steps.image.outputs.version }}
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
+        #cache-from: type=gha
+        #cache-to: type=gha,mode=max
           
   deploy:
     runs-on: ubuntu-latest
